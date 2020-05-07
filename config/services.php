@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'yandex' => [
+        'client_id' => '46fce3e28bba4e6d9fc48746b6fae001',
+        'client_secret' => 'ff7aa0ee21284871adb8c48dc37bd647',
+        'redirect' => 'http://localhost:8000/oauth/yandex/callback',
+    ],
+
 ];

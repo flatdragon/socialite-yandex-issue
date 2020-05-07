@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/oauth/yandex', function () {
+    return Socialite::driver('yandex')->redirect();
+})->name('oauth.yandex');
+
+Route::get('/oauth/yandex/callback', function () {
+    return 'You are correctly reached Yandex callback route!';
+})->name('oauth.yandex.callback');

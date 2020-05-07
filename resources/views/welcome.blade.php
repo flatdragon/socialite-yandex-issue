@@ -61,6 +61,16 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .btn-yandex {
+                 background: linear-gradient(to bottom,#ffdf60 0,#fc0 100%);
+                 border-radius: 4px;
+                 border: 0;
+                 margin-bottom: 2em;
+                 font-size: 2em;
+                 padding: 1em 2em;
+                 cursor: pointer;
+             }
         </style>
     </head>
     <body>
@@ -83,6 +93,11 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+
+                <form action="{{ route('oauth.yandex') }}" method="post">
+                    @csrf
+                    <button class="btn-yandex" type="submit">Login with Yandex</button>
+                </form>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
